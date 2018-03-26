@@ -1,0 +1,15 @@
+import fetch from 'isomorphic-fetch';
+
+class Fetch {
+  post(url, body) {
+    return fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    });
+  }
+}
+
+export default Fetch

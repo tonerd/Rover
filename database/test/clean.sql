@@ -1,0 +1,13 @@
+DROP procedure IF EXISTS clean;
+DELIMITER $$
+CREATE PROCEDURE clean()
+BEGIN
+  SET SQL_SAFE_UPDATES  = 0;
+	DELETE FROM rankings;
+  DELETE FROM reviews;
+  DELETE FROM appointments;
+  DELETE FROM users;
+  SET SQL_SAFE_UPDATES  = 1;
+END$$
+
+DELIMITER ;
